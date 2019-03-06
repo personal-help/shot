@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Shot</title>
+        <meta name="description" content="">
+        <link rel="stylesheet" href="main.css">
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    </head>
+    <body>
+
+        <script type="text/javascript">
+        
+    var link;
+            
+    function TEXT(){
+        var text = "";
+        var possible = "abcdefghijklmnopqrstuvwxyz";
+
+        for( var i=0; i < 3; i++ )
+            text += possible.charAt(Math.floor(Math.random() * possible.length));
+
+        return text;
+    }
+            
+            
+    function NUMB(min, max) {
+        return Math.floor(Math.random() * (max - min)) + min;
+    }
+            
+    function LINK(){
+        link = "https://prnt.sc/"+TEXT()+NUMB(100,999);
+        
+        return link;
+    }        
+           if(confirm("https://prnt.sc/"+TEXT()+NUMB(100,999)) == true ) location.href=LINK();
+            
+    
+            
+        </script>
+        
+    </body>
+</html>
